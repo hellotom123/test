@@ -1,0 +1,109 @@
+<%inherit file="/base-index.html"/>
+<%block name="content1">
+ <div class="king-content-wrap">
+                <!-- <div class="king-layout1-content" style="margin-left: 216px;">  -->
+                    <div class="king-block king-block-bordered king-block-themed m0">
+                        <div class="king-block-header king-info">
+                            <ul class="king-block-options">
+                                <li>
+                                    <!-- <button type="button"><i class="fa fa-cog"></i></button> -->
+                                </li>
+                            </ul>
+                            <h3 class="king-block-title">线上codis类缓存</h3>
+                        </div>
+                        <div class="king-block-content p0"></div>
+                    </div>
+                    <div class="container-fluid mb0 ">
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <form class="form-horizontal">
+                                    <div class="form-group clearfix f14">
+                                        <label class="col-sm-3 control-label bk-lh30 pt0">redis种类：</label>
+                                        <div class="col-sm-9">
+                                            <select name="a" id="a" class="form-control bk-valign-top">
+                                                <option value="codis">codis</option>
+                                                <option value="codis-bbs">codis-bbs</option>
+                                                <option value="codis-user">codis-user</option>
+                                            </select>
+                                            说明: codis:线上codis, codis-bbs:bbs项目, codis-user:user项目
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mb0 ">
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <form class="form-horizontal">
+                                    <div class="form-group clearfix f14">
+                                        <label class="col-sm-3 control-label bk-lh30 pt0">redis命令：</label>
+                                        <div class="col-sm-9">
+                                            <select name="b" id="b" class="form-control bk-valign-top">
+                                                <option value="GET">GET</option>
+                                                <option value="HGET">HGET</option>
+                                                <option value="SMEMBERS">SMEMBERS</option>
+                                                <option value="HGETALL">HGETALL</option>
+                                                <option value="LRANGE">LRANGE</option>
+                                                <option value="ZCOUNT">ZCOUNT</option>
+                                                <option value="ZRANGE">ZRANGE</option>
+                                                <option value="TTL">TTL</option>
+                                                <option value="SCARD">SCARD</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mb0 ">
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <form class="form-horizontal">
+                                    <div class="form-group clearfix f14">
+                                        <label class="col-sm-3 control-label bk-lh30 pt0">key：</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control bk-valign-top" id="c" name="c" placeholder="cc:course:2003"> </div>
+                                    </div>
+                                </form>
+                                <form class="form-horizontal">
+                                    <div class="form-group clearfix">
+                                        <div class="col-sm-9 col-sm-offset-3">
+                                            <button type="button" class="king-btn mr10 f20 king-success" id="select">提交</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                    </div>
+                    <form class="form-horizontal">
+                        <div class="king-widget1  m0">
+                            <div class="king-widget2-content p25">
+                                <div class="king-counter king-counter-lg">
+                                    <div class="king-counter-label text-uppercase">结果</div>
+                                    <span class="king-counter-number" id="result"></span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 设置面板Start -->
+                        <!-- 设置面板End -->
+                        <section>
+                            <div class="form-group clearfix">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <div class="bk-horizontal-line"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+              <!--  </div>  -->
+            </div>
+<script src="${STATIC_URL}js/redis-online.js"></script>
+</%block>
